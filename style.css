@@ -1,0 +1,10 @@
+/*
+Theme Name: Cinnamon Network
+Description: Theme for the Cinnamon Network based on the HTML5 Reset theme.
+Author: Matt Tobin
+Author URI: http://www.mikeleachcreative.co.uk.co.uk
+Version: 1.0
+*/
+@import url("css/reset.css");
+@import url("css/grid12.css");
+@import url("css/typography.css");

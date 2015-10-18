@@ -1,0 +1,7 @@
+{
+  "name": "WordPress-Theme",
+  "version": "1.0.0",
+  "description": "A blank WordPress theme based on the HTML5 Reset WordPress Theme",
+  "main": "Gulpfile.js",
+  "author": "Matt Tobin"
+}
