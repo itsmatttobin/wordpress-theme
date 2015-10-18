@@ -3,5 +3,13 @@
   "version": "1.0.0",
   "description": "A blank WordPress theme based on the HTML5 Reset WordPress Theme",
   "main": "Gulpfile.js",
-  "author": "Matt Tobin"
+  "repository": {
+    "type": "git",
+    "url": "https://matttobin@bitbucket.org/matttobin/wordpress-theme.git"
+  },
+  "author": "Matt Tobin",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  }
 }
