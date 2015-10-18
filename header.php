@@ -21,7 +21,7 @@
 			echo '<meta name="robots" content="noindex, nofollow" />';
 	?>
 
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<!--<title><?php wp_title( '|', true, 'right' ); ?></title>-->
 
 	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>">
 
@@ -73,9 +73,6 @@
 			echo '<link rel="apple-touch-icon" href="' . of_get_option("head_apple_touch_icon") . '">';
 	?>
 
-	<!-- Styles -->
-	<!-- Enqueued in functions.php -->
-
 	<!-- Application-specific meta tags -->
 	<?php
 		// Windows 8
@@ -109,7 +106,6 @@
 
 <body <?php body_class(); ?>>
 
-	<!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
 	<div id="wrapper">
 
 		<header id="header" role="banner">
