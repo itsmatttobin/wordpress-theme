@@ -74,14 +74,7 @@
 	?>
 
 	<!-- Styles -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
-
-	<!-- Lea Verou's Prefix Free, lets you use only un-prefixed properties in yuor CSS files -->
-    <script src="<?php echo get_template_directory_uri(); ?>/_/js/prefixfree.min.js"></script>
-
-	<!-- This is an un-minified, complete version of Modernizr.
-		 Before you move to production, you should generate a custom build that only has the detects you need. -->
-	<script src="<?php echo get_template_directory_uri(); ?>/_/js/modernizr-2.8.0.dev.js"></script>
+	<!-- Enqueued in functions.php -->
 
 	<!-- Application-specific meta tags -->
 	<?php
@@ -122,9 +115,9 @@
 		<header id="header" role="banner">
 			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<div class="description"><?php bloginfo( 'description' ); ?></div>
-		</header>
 
-		<nav id="nav" role="navigation">
-			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
-		</nav>
+			<nav id="nav" role="navigation">
+				<?php wp_nav_menu( array('theme_location' => 'main-menu') ); ?>
+			</nav>
+		</header>	
 

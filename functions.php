@@ -25,17 +25,14 @@
 			wp_enqueue_script( 'comment-reply' );
 
 		// Load Stylesheets
-//		wp_enqueue_style( 'html5reset-reset', get_template_directory_uri() . '/reset.css' );
-//		wp_enqueue_style( 'html5reset-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'theme-style', get_stylesheet_uri(), false, null );
 
-		// Load IE Stylesheet.
-//		wp_enqueue_style( 'html5reset-ie', get_template_directory_uri() . '/css/ie.css', array( 'html5reset-style' ), '20130213' );
-//		$wp_styles->add_data( 'html5reset-ie', 'conditional', 'lt IE 9' );
+		// Load IE Stylesheet
+		//wp_enqueue_style( 'html5reset-ie', get_template_directory_uri() . '/css/ie.css', array( 'html5reset-style' ), '20130213' );
+		//$wp_styles->add_data( 'html5reset-ie', 'conditional', 'lt IE 9' );
 
-		// Modernizr
-		// This is an un-minified, complete version of Modernizr. Before you move to production, you should generate a custom build that only has the detects you need.
-		// wp_enqueue_script( 'html5reset-modernizr', get_template_directory_uri() . '/_/js/modernizr-2.6.2.dev.js' );
-
+		// Load Scripts
+		wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/js/functions.js', array('jquery'), null, true );
 	}
 	add_action( 'wp_enqueue_scripts', 'html5reset_scripts_styles' );
 
@@ -46,20 +43,20 @@
 		if ( is_feed() )
 			return $title;
 
-//		 Add the site name.
+		// Add the site name.
 		$title .= get_bloginfo( 'name' );
 
-//		 Add the site description for the home/front page.
-		/*$site_description = get_bloginfo( 'description', 'display' );
+		// Add the site description for the home/front page.
+		$site_description = get_bloginfo( 'description', 'display' );
 		if ( $site_description && ( is_home() || is_front_page() ) )
-			$title = "$title $sep $site_description";*/
+			$title = "$title $sep $site_description";
 
-//		 Add the site description to all pages.
+		// Add the site description to all pages.
 		$site_description = get_bloginfo( 'description', 'display' );
 		if ( $site_description )
 			$title = "$title $sep $site_description";
 
-//		 Add a page number if necessary.
+		// Add a page number if necessary.
 		if ( $paged >= 2 || $page >= 2 )
 			$title = "$title $sep " . sprintf( __( 'Page %s', 'html5reset' ), max( $paged, $page ) );
 
@@ -70,30 +67,20 @@
 
 
 
-//OLD STUFF BELOW
-
-
 	// Load jQuery
 	if ( !function_exists( 'core_mods' ) ) {
 		function core_mods() {
 			if ( !is_admin() ) {
 				wp_deregister_script( 'jquery' );
-				wp_register_script( 'jquery', ( "http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ), false);
+				wp_register_script( 'jquery', ( "//code.jquery.com/jquery-1.11.3.min.js" ), false);
 				wp_enqueue_script( 'jquery' );
 			}
 		}
 		add_action( 'wp_enqueue_scripts', 'core_mods' );
 	}
 
-	// Clean up the <head>, if you so desire.
-	//	function removeHeadLinks() {
-	//    	remove_action('wp_head', 'rsd_link');
-	//    	remove_action('wp_head', 'wlwmanifest_link');
-	//    }
-	//    add_action('init', 'removeHeadLinks');
-
 	// Custom Menu
-	register_nav_menu( 'primary', __( 'Navigation Menu', 'html5reset' ) );
+	//register_nav_menu( 'primary', __( 'Navigation Menu', 'html5reset' ) );
 
 	// Widgets
 	if ( function_exists('register_sidebar' )) {

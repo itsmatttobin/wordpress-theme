@@ -26,8 +26,8 @@
 
 	<?php endwhile; endif; ?>
 
-<?php post_navigation(); ?>
+	<?php post_navigation(); ?>
 	
-<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
