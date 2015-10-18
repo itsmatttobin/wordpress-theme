@@ -26,7 +26,7 @@
 			wp_enqueue_script( 'comment-reply' );
 
 		// Load Stylesheets
-		wp_enqueue_style( 'theme-style', get_stylesheet_uri(), false, null );
+		wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/style.min.css', false, null );
 
 		// Load IE Stylesheet
 		//wp_enqueue_style( 'html5reset-ie', get_template_directory_uri() . '/css/ie.css', array( 'html5reset-style' ), '20130213' );

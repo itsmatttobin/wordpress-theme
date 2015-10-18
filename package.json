@@ -10,6 +10,8 @@
   "author": "Matt Tobin",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4"
   }
 }
