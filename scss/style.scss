@@ -1,13 +1,7 @@
-/*
-Theme Name: ...
-Description: ...
-Author: Matt Tobin
-Author URI: ...
-Version: 1.0.0
-*/
-
 @import 'vars';
 @import 'grid';
 @import 'reset';
-@import 'typography';
 @import 'wordpress';
+@import 'typography';
+@import 'main';
+@import 'mediaqueries';

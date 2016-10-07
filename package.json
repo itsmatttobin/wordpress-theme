@@ -5,13 +5,14 @@
   "main": "Gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "https://matttobin@bitbucket.org/matttobin/wordpress-theme.git"
+    "url": "https://itsmatttobin@bitbucket.org/matttobin/wordpress-theme.git"
   },
   "author": "Matt Tobin",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-minify-css": "^1.2.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.4"
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
   }
 }
