@@ -1,9 +1,8 @@
 body {
 	font-family: $sansSerif;
 	font-size: 16px;
-	line-height: 1.75;
+	line-height: 1.5;
 	color: $text;
-	font-weight: 300;
 	-webkit-font-smoothing: antialiased;
 }
 input,
@@ -36,7 +35,7 @@ img {
 	height: auto;
 }
 hr {
-	margin: 20px 0;
+	margin: 1em 0;
 }
 h1,
 h2,
@@ -44,46 +43,46 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 700;
-	line-height: 3.125rem;
+	line-height: 1.5;
 }
 h1 {
-	font-size: 3em;
-	margin: 4.25rem 0 1.75rem;
+	font-size: 2em;
+	margin: 0.67em 0;
 }
 h2 {
-	font-size: 2.5em;
-	margin: 4rem 0 1.5rem;
+	font-size: 1.5em;
+	margin: 0.83em 0;
 }
 h3 {
-	font-size: 2em;
-	margin: 3.75rem 0 1.25rem;
+	font-size: 1.17em;
+	margin: 1em 0;
 }
 h4 {
-	font-size: 1.5em;
-	margin: 3.5rem 0 1rem;
+	font-size: 1em;
+	margin: 1.33em 0;
 }
 h5 {
-	font-size: 1.25em;
-	margin: 3.375rem 0 0.875rem;
+	font-size: 0.83em;
+	margin: 1.67em 0;
 }
 h6 {
-	font-size: 1em;
+	font-size: 0.67em;
+	margin: 2.33em 0;
 }
 p {
-	margin: 0 0 1.7em;
+	margin: 0 0 1em;
 }
 small {
 	font-size: 85%;
 }
 mark {
 	background-color: #ff0;
-	padding: .2em;
+	padding: 0.2em;
 }
 ul,
 ol {
 	margin-top: 0;
-	margin-bottom: 1.7em;
+	margin-bottom: 1em;
 	padding-left: 2.5em;
 }
 ul ul,
@@ -94,7 +93,7 @@ ol ol {
 }
 dl {
 	margin-top: 0;
-	margin-bottom: 20px;
+	margin-bottom: 1em;
 }
 dt {
 	font-weight: bold;
@@ -103,8 +102,8 @@ dd {
 	margin-left: 0;
 }
 blockquote {
-	padding: 10px 30px;
-	margin: 0 0 20px;
+	padding: 0.625em 1.875em;
+	margin: 0 0 1em;
 	font-style: italic;
 }
 blockquote p:last-child,
