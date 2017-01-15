@@ -1,7 +1,7 @@
 {
   "name": "WordPress-Theme",
   "version": "1.0.0",
-  "description": "A blank WordPress theme based on the HTML5 Reset WordPress Theme",
+  "description": "A blank WordPress theme for development",
   "main": "Gulpfile.js",
   "repository": {
     "type": "git",

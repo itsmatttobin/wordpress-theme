@@ -6,30 +6,30 @@ var rename = require('gulp-rename');
 
 // SASS
 gulp.task('sass', function() {
-    return gulp.src('scss/*.scss')
+    return gulp.src('assets/scss/style.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('css/src'));
+        .pipe(gulp.dest('assets/css/src'));
 });
 
 // Minify CSS
 gulp.task('minify-css', function() {
-  return gulp.src('css/src/style.css')
+  return gulp.src('assets/css/src/style.css')
     .pipe(cleanCSS())
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('css/dist'));
+    .pipe(gulp.dest('assets/css/dist'));
 });
 
 // Minify JS
 gulp.task('minify-js', function() {
-    return gulp.src('js/src/functions.js')
+    return gulp.src('assets/js/src/functions.js')
         .pipe(uglify())
         .pipe(rename('functions.min.js'))
-        .pipe(gulp.dest('js/dist'));
+        .pipe(gulp.dest('assets/js/dist'));
 });
 
 // Default task
 gulp.task('default', function() {
-    gulp.watch('scss/*scss', ['sass']);
-    gulp.watch('css/src/style.css', ['minify-css']);
-    gulp.watch('js/src/functions.js', ['minify-js']);
+    gulp.watch('assets/scss/**/*.scss', ['sass']);
+    gulp.watch('assets/css/src/style.css', ['minify-css']);
+    gulp.watch('assets/js/src/functions.js', ['minify-js']);
 });
