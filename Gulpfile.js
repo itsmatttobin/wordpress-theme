@@ -21,15 +21,23 @@ gulp.task('minify-css', function() {
 
 // Minify JS
 gulp.task('minify-js', function() {
-    return gulp.src('assets/js/src/functions.js')
-        .pipe(uglify())
-        .pipe(rename('functions.min.js'))
+    return gulp.src('assets/js/src/**/*.js')
+        .pipe(uglify().on('error', swallowError))
+        .pipe(rename(function(path) {
+            path.basename += '.min';
+        }))
         .pipe(gulp.dest('assets/js/dist'));
 });
+
+// Stop watch tasks from stopping on error
+function swallowError (error) {
+    console.log(error.toString());
+    this.emit('end');
+}
 
 // Default task
 gulp.task('default', function() {
     gulp.watch('assets/scss/**/*.scss', ['sass']);
     gulp.watch('assets/css/src/style.css', ['minify-css']);
-    gulp.watch('assets/js/src/functions.js', ['minify-js']);
+    gulp.watch('assets/js/src/**/*.js', ['minify-js']);
 });
