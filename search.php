@@ -1,37 +1,47 @@
 <?php get_header(); ?>
 
-	<?php if (have_posts()) : ?>
+	<div class="row">
 
-		<h2><?php _e('Search Results','textdomain'); ?></h2>
+		<div class="col-xs-12 col-md-8">
 
-		<?php post_navigation(); ?>
+			<?php if (have_posts()) : ?>
 
-		<?php while (have_posts()) : the_post(); ?>
+				<h2><?php _e('Search Results','textdomain'); ?></h2>
 
-			<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+				<?php while (have_posts()) : the_post(); ?>
 
-				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-				<?php posted_on(); ?>
+						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-				<div class="entry">
+						<?php posted_on(); ?>
 
-					<?php the_excerpt(); ?>
+						<div class="entry">
 
-				</div>
+							<?php the_excerpt(); ?>
 
-			</article>
+						</div>
 
-		<?php endwhile; ?>
+					</article>
 
-		<?php post_navigation(); ?>
+				<?php endwhile; ?>
 
-	<?php else : ?>
+				<?php post_navigation(); ?>
 
-		<h2><?php _e('Nothing Found','textdomain'); ?></h2>
+			<?php else : ?>
 
-	<?php endif; ?>
+				<h2><?php _e('Nothing Found','textdomain'); ?></h2>
 
-	<?php get_sidebar(); ?>
+			<?php endif; ?>
+
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+
+			<?php get_sidebar(); ?>
+
+		</div>
+
+	</div>
 
 <?php get_footer(); ?>

@@ -1,5 +1,9 @@
+		</div><!-- .container -->
+
 		<footer id="footer">
-			<small>&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></small>
+			<div class="container">
+				<small>&copy;<?php echo date('Y'); echo ' '; bloginfo('name'); ?></small>
+			</div>
 		</footer>
 
 	</div><!-- #wrapper -->

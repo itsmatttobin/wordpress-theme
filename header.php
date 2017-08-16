@@ -27,11 +27,15 @@
 	<div id="wrapper">
 
 		<header id="header">
-			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<div class="description"><?php bloginfo( 'description' ); ?></div>
+			<div class="container">
+				<h1><a href="/"><?php bloginfo( 'name' ); ?></a></h1>
+				<div class="description"><?php bloginfo( 'description' ); ?></div>
 
-			<nav id="nav">
-				<?php wp_nav_menu( array('theme_location' => 'main-menu') ); ?>
-			</nav>
+				<nav id="nav">
+					<?php wp_nav_menu( array('theme_location' => 'main-menu') ); ?>
+				</nav>
+			</div>
 		</header>
+
+		<div class="container">
 

@@ -1,35 +1,47 @@
 <?php get_header(); ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<div class="row">
 
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+		<div class="col-xs-12 col-md-8">
 
-			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<?php posted_on(); ?>
+				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-			<div class="entry">
-				<?php the_content(); ?>
-			</div>
+					<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 
-			<footer class="postmetadata">
-				<?php the_tags(__('Tags: ','textdomain'), ', ', '<br />'); ?>
-				<?php _e('Posted in','textdomain'); ?> <?php the_category(', ') ?> | 
-				<?php comments_popup_link(__('No Comments &#187;','textdomain'), __('1 Comment &#187;','textdomain'), __('% Comments &#187;','textdomain')); ?>
-			</footer>
+					<?php posted_on(); ?>
 
-		</article>
+					<div class="entry">
+						<?php the_content(); ?>
+					</div>
 
-	<?php endwhile; ?>
+					<footer class="postmetadata">
+						<?php the_tags(__('Tags: ','textdomain'), ', ', '<br />'); ?>
+						<?php _e('Posted in','textdomain'); ?> <?php the_category(', ') ?> | 
+						<?php comments_popup_link(__('No Comments &#187;','textdomain'), __('1 Comment &#187;','textdomain'), __('% Comments &#187;','textdomain')); ?>
+					</footer>
 
-	<?php post_navigation(); ?>
+				</article>
 
-	<?php else : ?>
+			<?php endwhile; ?>
 
-		<h2><?php _e('Nothing Found','textdomain'); ?></h2>
+			<?php post_navigation(); ?>
 
-	<?php endif; ?>
+			<?php else : ?>
 
-	<?php get_sidebar(); ?>
+				<h2><?php _e('Nothing Found','textdomain'); ?></h2>
+
+			<?php endif; ?>
+
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+
+			<?php get_sidebar(); ?>
+
+		</div>
+
+	</div>
 
 <?php get_footer(); ?>
