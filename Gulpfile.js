@@ -4,17 +4,25 @@ var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var babel = require('gulp-babel');
+var autoprefixer = require('gulp-autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
 
 // SASS
 gulp.task('sass', function() {
   return gulp.src('assets/scss/style.scss')
-      .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('assets/css/src'));
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('assets/css/src'));
 });
 
 // Minify CSS
 gulp.task('minify-css', function() {
   return gulp.src('assets/css/src/**/*.css')
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
     .pipe(cleanCSS())
     .pipe(rename(function(path) {
         path.basename += '.min';

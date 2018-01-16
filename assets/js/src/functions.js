@@ -1,9 +1,9 @@
 (function ($) {
 
-	$(document).ready(function (){
+  $(document).ready(function (){
 
-        
+    
 
-	});
+  });
 
 }(window.jQuery || window.$));

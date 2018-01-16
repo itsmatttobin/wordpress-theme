@@ -1,21 +1,23 @@
 {
   "name": "WordPress-Theme",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "description": "A blank WordPress theme for development",
   "main": "Gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "https://itsmatttobin@bitbucket.org/matttobin/wordpress-theme.git"
+    "url": "https://github.com/itsmatttobin/wordpress-theme"
   },
   "author": "Matt Tobin",
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.0",
-    "gulp-clean-css": "^3.8.0",
+    "gulp-clean-css": "^3.9.2",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0"
   }
 }
